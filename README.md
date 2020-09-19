@@ -21,4 +21,4 @@ TEST REQUEST W/ cURL (be sure token is in OS environment variables):
 
 `curl -H "Access-Control-Request-Method: GET" -H "Origin: http://localhost" https://cors-anywhere.herokuapp.com/http://api.musixmatch.com/ws/1.1/chart.tracks.get\?page\=1\&page_size\=10\&country\=us\&f_has_lyrics\=1\&apikey\=$MUSIXMATCH_TOKEN | jq .`
 
-- See: [Adding Custom Environment Variables](https://create-react-app.dev/docs/adding-custom-environment-variables/)
+- Using `dotenv-webpack` package in app to allow for use of environment variables. For configuration, see: https://www.npmjs.com/package/dotenv-webpack
