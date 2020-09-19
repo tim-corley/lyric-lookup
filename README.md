@@ -1,11 +1,11 @@
-# Barebones React App Starter Kit
+# Lyric Lookup React App
 
-### Leverages Webpack & Tailwind CSS
+### Explore the Context API
+
+**NOTE:** Source tutorial uses class components. this project uses funcational components and hooks.
 
 ```
 $ git clone
 $ npm install
 $ npm run start
 ```
-
-TODO: add configuration for jest
