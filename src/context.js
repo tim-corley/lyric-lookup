@@ -28,6 +28,3 @@ export const ContextController = ({ children }) => {
     <Context.Provider value={[state, setState]}>{children}</Context.Provider>
   );
 };
-
-// TEST REQUEST W/ cURL:(be sure token is in environment variables)
-// curl -H "Access-Control-Request-Method: GET" -H "Origin: http://localhost" https://cors-anywhere.herokuapp.com/http://api.musixmatch.com/ws/1.1/chart.tracks.get\?page\=1\&page_size\=10\&country\=us\&f_has_lyrics\=1\&apikey\=$MUSIXMATCH_TOKEN

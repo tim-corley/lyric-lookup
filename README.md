@@ -9,3 +9,16 @@ $ git clone
 $ npm install
 $ npm run start
 ```
+
+### Source Material
+
+- [YouTube](https://www.youtube.com/watch?v=NDEt0KdDbhk&list=PLillGF-RfqbaxgxkKgKk1XlJAVCX31xRI)
+- [Code](https://github.com/bradtraversy/lyricfinder)
+
+### 3<sup>rd</sup> Party API Call
+
+TEST REQUEST W/ cURL (be sure token is in OS environment variables):
+
+`curl -H "Access-Control-Request-Method: GET" -H "Origin: http://localhost" https://cors-anywhere.herokuapp.com/http://api.musixmatch.com/ws/1.1/chart.tracks.get\?page\=1\&page_size\=10\&country\=us\&f_has_lyrics\=1\&apikey\=$MUSIXMATCH_TOKEN`
+
+- See: [Adding Custom Environment Variables](https://create-react-app.dev/docs/adding-custom-environment-variables/)
