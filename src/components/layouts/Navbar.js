@@ -3,7 +3,7 @@ import "../../styles.css";
 
 const Navbar = () => {
   return (
-    <nav className="bg-indigo-800 shadow-lg font-playfair font-bold text-center text-2xl text-white p-6">
+    <nav className="bg-indigo-800 shadow-lg font-playfair font-bold text-center text-2xl text-white sticky top-0 p-6 my-4">
       Lyric Lookup
     </nav>
   );
