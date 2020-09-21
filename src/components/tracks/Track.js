@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const Track = ({ track }) => {
-  console.log(track);
   return (
     <div className="rounded shadow-lg border-solid border-2 border-gray-600 bg-white bg-opacity-50  m-2 p-2">
       <h2>{track.artist_name}</h2>
