@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Spinner from "../layouts/Spinner";
+import { Link } from "react-router-dom";
 
 const Lyrics = (props) => {
   let initialLyricState = {
@@ -65,13 +66,40 @@ const Lyrics = (props) => {
   } else {
     return (
       <>
-        <div>
-          <h1>Lyrics Page</h1>
-          <hr />
-          <h2>{trackInfo.track_name}</h2>
-          <h3>By: {trackInfo.artist_name}</h3>
-          <hr />
-          <p>{lyrics.lyrics_body}</p>
+        <Link to="/">
+          <button className="flex font-thin font-playfair text-background m-4 py-2 px-6 shadow-lg bg-yellow-500 hover:bg-yellow-600">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="feather feather-arrow-left pt-1 mr-2"
+            >
+              <line x1="19" y1="12" x2="5" y2="12"></line>
+              <polyline points="12 19 5 12 12 5"></polyline>
+            </svg>
+            Back
+          </button>
+        </Link>
+        <div className="lg:w-3/4 w-11/12 m-auto mt-10 bg-gradient-to-b from-white shadow-lg font-playfair">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
+            <div className="col-span-1">
+              <div className="text-2xl font-bold flex w-full mt-8 p-4 justify-center">
+                {trackInfo.track_name}
+              </div>
+              <div className="font-semibold flex w-full mb-8 p-4 justify-center">
+                By: {trackInfo.artist_name}
+              </div>
+            </div>
+            <div className="m-4 p-2 col-span-2">
+              <p>{lyrics.lyrics_body}</p>
+            </div>
+          </div>
         </div>
         <script type="text/javascript" src={tracker}></script>
       </>
