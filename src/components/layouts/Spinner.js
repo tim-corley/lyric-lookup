@@ -2,7 +2,7 @@ import React from "react";
 
 const Spinner = () => {
   return (
-    <div className="mt-4 text-gray-400">
+    <div className="mt-4 text-yellow-500">
       <svg
         className="animate-spin-slow m-auto"
         xmlns="http://www.w3.org/2000/svg"

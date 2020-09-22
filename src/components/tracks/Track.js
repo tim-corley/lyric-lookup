@@ -45,7 +45,7 @@ const Track = ({ track }) => {
       </div>
       <Link to={`lyrics/track/${track.track_id}`}>
         <div className="flex justify-center">
-          <button className="font-bold w-full mt-4 mb-2 py-2 px-6 bg-yellow-400 hover:bg-yellow-500">
+          <button className="font-bold w-full mt-4 mb-2 py-2 px-6 bg-yellow-500 hover:bg-yellow-600">
             View Lyrics
           </button>
         </div>
