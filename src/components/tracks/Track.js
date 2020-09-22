@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Track = ({ track }) => {
   return (
     <div className="rounded shadow-lg border-solid border-2 border-gray-600 bg-white bg-opacity-50  m-2 p-2">
-      <h2>{track.artist_name}</h2>
+      <h2 className="lg:text-xl font-bold">{track.artist_name}</h2>
       <div className="border-b-2 border-gray-300 w-1/2 m-auto my-2"></div>
       <div className="flex justify-start mb-2">
         <svg
