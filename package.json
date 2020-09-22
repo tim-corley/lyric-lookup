@@ -1,4 +1,5 @@
 {
+  "homepage": "https://tim-corley.github.io/lyric-lookup/",
   "name": "lyric-lookup-app",
   "version": "1.0.0",
   "description": "a react application to search for song lyrics",
@@ -6,9 +7,9 @@
   "scripts": {
     "start": "webpack-dev-server --mode development --open",
     "build": "webpack --mode production",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },
-  "homepage": "https://tim-corley.github.io/lyric-lookup/",
   "keywords": [],
   "author": "tcorley215@gmail.com",
   "license": "MIT",

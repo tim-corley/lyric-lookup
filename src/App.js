@@ -4,18 +4,16 @@ import Navbar from "./components/layouts/Navbar";
 import Index from "./components/layouts/Index";
 import Lyrics from "./components/tracks/Lyrics";
 import { ContextController } from "./context";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { HashRouter, Route } from "react-router-dom";
 
 const App = () => {
   return (
     <ContextController>
-      <Router>
+      <HashRouter basename="/">
         <Navbar />
-        <Switch>
-          <Route exact path="/" component={Index} />
-          <Route exact path="/lyrics/track/:id" component={Lyrics} />
-        </Switch>
-      </Router>
+        <Route exact path="/" component={Index} />
+        <Route exact path="/lyrics/track/:id" component={Lyrics} />
+      </HashRouter>
     </ContextController>
   );
 };
