@@ -1,14 +1,14 @@
 {
-  "name": "scratch-starter-app",
+  "name": "lyric-lookup-app",
   "version": "1.0.0",
-  "description": "",
+  "description": "a react application to search for song lyrics",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --mode development --open",
     "build": "webpack --mode production"
   },
   "keywords": [],
-  "author": "",
+  "author": "tcorley215@gmail.com",
   "license": "MIT",
   "devDependencies": {
     "@babel/cli": "^7.10.5",
