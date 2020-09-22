@@ -48,7 +48,6 @@ const Lyrics = (props) => {
       })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data.message.body);
         setTrackInfo({
           track_name: data.message.body.track.track_name,
           artist_name: data.message.body.track.artist_name,
@@ -70,9 +69,39 @@ const Lyrics = (props) => {
   if (
     trackInfo.track_name === "" ||
     trackInfo.artist_name === "" ||
-    lyrics.lyrics_body === ""
+    (lyrics.lyrics_body === "" && !lyrics.copyright.includes("not authorized"))
   ) {
     return <Spinner />;
+  } else if (lyrics.copyright.includes("not authorized")) {
+    return (
+      <>
+        <Link to="/">
+          <button className="flex font-thin font-playfair text-background m-4 py-2 px-6 shadow-lg bg-yellow-500 hover:bg-yellow-600">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="feather feather-arrow-left pt-1 mr-2"
+            >
+              <line x1="19" y1="12" x2="5" y2="12"></line>
+              <polyline points="12 19 5 12 12 5"></polyline>
+            </svg>
+            Back
+          </button>
+        </Link>
+        <div className="lg:w-3/4 w-11/12 m-auto mt-10 mb-4 bg-gradient-to-b from-white shadow-lg font-playfair">
+          <h2 className="text-indigo-800 text-xl m-4 p-4">
+            Sorry, not authorized to show these lyrics.
+          </h2>
+        </div>
+      </>
+    );
   } else {
     return (
       <>
