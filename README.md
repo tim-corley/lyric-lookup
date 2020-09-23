@@ -12,6 +12,7 @@ $ npm run start
 
 - [YouTube](https://www.youtube.com/watch?v=NDEt0KdDbhk&list=PLillGF-RfqbaxgxkKgKk1XlJAVCX31xRI)
 - [Code](https://github.com/bradtraversy/lyricfinder)
+- [API Doc](https://developer.musixmatch.com/documentation/api-methods)
 
 ### 3<sup>rd</sup> Party API Call
 
